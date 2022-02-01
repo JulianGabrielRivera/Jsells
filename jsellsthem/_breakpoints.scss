@@ -1,0 +1,48 @@
+$breakpoints: (
+  'xs': 0,
+  'sm': 480px,
+  'md': 720px,
+  'lg': 960px,
+  'xl': 1200px,
+);
+
+@mixin xs {
+  @media (min-width: map-get($breakpoints, 'xs')) {
+    // this says look in the breakpoint map and get the XS;
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: map-get($breakpoints, 'sm')) {
+    // this says look in the breakpoint map and get the XS;
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: map-get($breakpoints, 'md')) {
+    // this says look in the breakpoint map and get the XS;
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: map-get($breakpoints, 'lg')) {
+    // this says look in the breakpoint map and get the XS;
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: map-get($breakpoints, 'xl')) {
+    // this says look in the breakpoint map and get the XS;
+    @content;
+  }
+}
+
+@mixin breakpoint($bp: 0) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}

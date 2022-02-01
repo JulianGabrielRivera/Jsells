@@ -1,0 +1,503 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+body.dark {
+  background: #201c2b;
+  color: white;
+}
+
+header {
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+
+  background-color: white;
+
+  width: 100%;
+  height: 100px;
+  border: 1px solid rgba(160, 173, 173, 0.5);
+}
+body.dark header {
+  background: #201c2b;
+  color: white;
+}
+.center {
+  flex-grow: 6;
+}
+
+h2 {
+  /* margin-top: 30px; */
+  text-align: center;
+  font-family: 'Paytone One', sans-serif;
+}
+.lefttwo {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+}
+
+.searchtop {
+  margin-top: 10px;
+  font-size: 0.8em;
+}
+
+.searchbar {
+  position: absolute;
+  right: 30px;
+  padding: 0;
+  display: none;
+  cursor: pointer;
+  width: 200px;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 5px 5px gray;
+  border-radius: 10px;
+}
+.show {
+  display: block;
+}
+.searchbar li {
+  list-style: none;
+  background-color: white;
+  margin-left: 15px;
+}
+
+.lasttwo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  align-items: center;
+}
+input {
+  text-align: center;
+  height: 20px;
+  border: 2px solid rgba(160, 173, 173, 0.5);
+  opacity: 0.7;
+}
+body.dark .white a {
+  color: white;
+}
+body.dark .topbuttons {
+  border: 2px solid rgba(160, 173, 173, 0.5);
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+.topbuttons {
+  margin-top: 20px;
+  margin-right: 30px;
+  width: 70px;
+  height: 25px;
+  border: none;
+  /* display: none; */
+}
+
+/* display none will hide its children elements as well */
+.signupbackdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.signupcontainer {
+  box-shadow: 0px 5px 5px gray;
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  padding: 20px;
+
+  border-radius: 4px;
+  position: relative;
+}
+.closecontainer {
+  font-size: 1.5em;
+  right: 14px;
+  top: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.signupform {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+form input {
+  text-align: start;
+  padding: 10px;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+}
+.loginbuttons {
+  background-color: black;
+  color: White;
+  width: 100%;
+  height: 40px;
+}
+
+.loginbackdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  position: absolute;
+  top: 0;
+
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.logincontainer {
+  width: 500px;
+  height: 500px;
+  padding: 30px;
+  background-color: white;
+
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0px 5px 5px gray;
+  border-radius: 4px;
+}
+.underform {
+  display: flex;
+  justify-content: space-between;
+}
+
+.closecontainertwo {
+  font-size: 1.5em;
+  right: 14px;
+  top: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.formh1 {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* .modalcontainer h1 {
+  font-size: 1.3em;
+} */
+
+.switch {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+  border: 2px solid black;
+  margin-top: 17px;
+  background-color: white;
+}
+body.dark .switch {
+  border: 2px solid #201c2b;
+}
+.switch:after {
+  content: '';
+
+  width: 17px;
+  height: 16px;
+  position: absolute;
+  background: black;
+  top: 0;
+  left: 0.5px;
+  right: unset;
+  border-radius: 50%;
+}
+.active {
+  background: white;
+}
+.active:after {
+  right: 0;
+  left: unset;
+}
+nav.hamburger {
+  width: 100px;
+}
+
+.hamburger__button {
+  width: 50px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.hamburger__button:focus {
+  outline: none;
+}
+
+.hamburger__button-bar {
+  width: 70%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.3rem 0;
+}
+body.dark .hamburger__button-bar {
+  background: white;
+}
+
+nav {
+  display: flex;
+  width: 150px;
+  height: 100%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+nav li {
+  list-style: none;
+  padding: 8px;
+}
+.maincontainer {
+  display: flex;
+}
+.navcontainer {
+  margin-top: 40px;
+}
+.imagecontainer {
+  display: flex;
+  margin: 0 auto;
+}
+.left {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.style1 {
+  max-width: 100%;
+  max-height: 585px;
+}
+.style2 {
+  margin-top: 40px;
+
+  max-height: 585px;
+  object-fit: contain;
+  max-width: 100%;
+
+  /* padding: 15px; */
+}
+p {
+  text-align: center;
+  margin-top: 30px;
+}
+.trending {
+  font-size: 1rem;
+  font-weight: bolder;
+  text-align: center;
+  padding: 20px;
+}
+.trendingimgcontainer {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.trendingimg {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  padding: 15px;
+}
+.specific {
+  text-align: center;
+  font-size: 0.8em;
+}
+.next {
+  margin-top: 70px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.before {
+  margin-top: 70px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+#filtered {
+  display: none;
+}
+body.dark .trendingimgcontainer {
+  border: 1px solid rgba(160, 173, 173, 0.5);
+}
+
+@media (max-width: 700px) {
+  header {
+    display: flex;
+    flex-direction: row;
+
+    background-color: white;
+    align-items: unset;
+    width: 100%;
+    height: 100px;
+    border: 1px solid rgba(160, 173, 173, 0.5);
+  }
+  .lefttwo {
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+
+  .switch {
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    border: 2px solid black;
+    margin-top: 15px;
+    background-color: white;
+  }
+  body.dark .switch {
+    border: 2px solid #201c2b;
+  }
+  .switch:after {
+    content: '';
+
+    width: 17px;
+    height: 16px;
+    position: absolute;
+    background: black;
+    top: 0;
+    left: 0.5px;
+    right: unset;
+    border-radius: 50%;
+  }
+  .active {
+    background: white;
+  }
+  .active:after {
+    right: 0;
+    left: unset;
+  }
+  nav.hamburger {
+    width: 100px;
+  }
+
+  .hamburger__button {
+    width: 50px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .hamburger__button:focus {
+    outline: none;
+  }
+
+  .hamburger__button-bar {
+    width: 70%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.3rem 0;
+  }
+  body.dark .hamburger__button-bar {
+    background: white;
+  }
+
+  .lasttwo {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 4;
+    max-width: 100%;
+  }
+  .center {
+    flex-grow: 4;
+  }
+
+  .topbuttons {
+    display: none;
+  }
+
+  #top {
+    padding: 25px 10px;
+  }
+  .searchsomething {
+    display: none;
+  }
+  .searchtop {
+    margin: 0;
+    font-size: 0.8em;
+  }
+  h2 {
+    display: none;
+    flex-grow: 0;
+  }
+  .maincontainer {
+    display: flex;
+    flex-direction: column;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+
+    list-style-type: none;
+    padding: 0;
+  }
+  nav li {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* .imagecontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  } */
+  .style1 {
+    display: none;
+  }
+  .trending {
+    font-size: 1rem;
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px;
+  }
+  .trendingimgcontainer {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+  }
+  .trendingimg {
+    border-radius: 50%;
+    height: 80px;
+    width: 150px;
+    object-fit: fill;
+    padding: 15px;
+    max-width: 100%;
+    flex-grow: 1;
+  }
+  .specific {
+    text-align: center;
+    font-size: 0.8em;
+    max-width: 100%;
+  }
+}

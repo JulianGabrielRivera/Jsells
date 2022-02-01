@@ -1,0 +1,43 @@
+// theme colors
+
+$primary: #201c2b;
+$secondary: white;
+$error: red;
+$info: yellow;
+
+//color palette
+$colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'error': $error,
+  'info': $info,
+  'blue': blue,
+);
+
+@debug map-get($colors, 'primary'); // these check if we have certain variables
+@debug map-has-key($colors, 'secondary');
+@debug map-merge(
+  $colors,
+  (
+    'pink': #ffc0cb,
+    'green': green,
+  )
+);
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+//borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+// box-shadow
+
+$base-box-shadow: 0px 5px 5px gray;
+
+// font sizes
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;

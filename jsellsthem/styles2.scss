@@ -1,0 +1,38 @@
+//varibles and functions
+@import 'functions';
+@import 'variables'; // this is how we import variables and its easier to maintain and read our code.
+
+// base and layouts
+@import 'base'; // order of import matters so since variables is up there then we can use whatever variables has and use them in the base
+
+//colors
+@import 'colors';
+
+//components (buttons, card, navbar)
+
+//utilities (margin,padding, opacity) m-4 = strength of 4 pl-3 strength of 3 opactity - 40 = 40 percent opacity
+
+@import 'components/button';
+
+@import 'utilities';
+nav {
+  display: flex;
+  width: 150px;
+  height: 100%;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  li {
+    list-style: none;
+    padding: 8px;
+  }
+}
+.navcontainer {
+  margin-top: 40px;
+}
